@@ -25,7 +25,8 @@
 		"clear:jsx": "rimraf src/*.jsx",
 		"clear:js": "rimraf src/*.js",
 		"prepublish": "yarn ts && yarn clear:jsx && yarn build && yarn clear:js && node scripts/copyBuildFiles.js",
-		"publish": "cd package && npm publish && cd .."
+		"publish": "cd package && npm publish && cd ..",
+		"coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
 	},
 	"peerDependencies": {
 		"react": "^16.8.6",
@@ -42,6 +43,7 @@
 		"babel-jest": "^24.8.0",
 		"babel-plugin-named-asset-import": "^0.3.2",
 		"babel-preset-react-app": "^9.0.0",
+		"coveralls": "^3.0.4",
 		"cpx": "^1.5.0",
 		"enzyme": "^3.10.0",
 		"enzyme-adapter-react-16": "^1.14.0",
@@ -53,12 +55,12 @@
 		"preconstruct": "^0.0.79",
 		"q": "^1.5.1",
 		"react": "^16.8.6",
+		"react-app-polyfill": "^1.0.1",
 		"react-dom": "^16.8.6",
 		"react-hooks-testing-library": "^0.5.1",
 		"react-test-renderer": "^16.8.6",
 		"rimraf": "^2.6.3",
-		"typescript": "3.5.1",
-		"react-app-polyfill": "^1.0.1"
+		"typescript": "3.5.1"
 	},
 	"jest": {
 		"collectCoverageFrom": [ "src/**/*.{js,jsx,ts,tsx}", "!src/**/*.d.ts" ],
