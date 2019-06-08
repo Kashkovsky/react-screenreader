@@ -68,6 +68,10 @@ describe("useScreenReader", () => {
 		});
 	});
 
+	test("elementReducer - returns existing state bu default", () => {
+		expect(elementReducer({}, { type: "TEST" })).toEqual({});
+	});
+
 	test("read - adds aria-live element with given text", () => {
 		const { result } = renderHook(() => useScreenReader());
 		act(() => result.current.read("some text"));
@@ -81,10 +85,11 @@ describe("useScreenReader", () => {
 		let wrapper: ShallowWrapper;
 
 		act(() => {
+			const reader = result.current.reader("some text");
 			wrapper = shallow(
 				<div>
 					{result.current.a11y()}
-					<Elem {...result.current.reader("some text")} />
+					<Elem {...reader} />
 				</div>
 			);
 
