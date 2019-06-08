@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/Kashkovsky/react-screenreader.svg?branch=master)](https://travis-ci.org/Kashkovsky/react-screenreader)
+[![Coverage Status](https://coveralls.io/github/Kashkovsky/react-screenreader/badge.svg?branch=master)](https://coveralls.io/github/Kashkovsky/react-screenreader?branch=master)
+
 # Extended screen reader support for React components
 **react-screenreader** exposes *useScreenReader* React hook which allows you to easily implement custom dynamic descriptions for screen readers.
 
