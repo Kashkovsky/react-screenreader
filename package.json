@@ -1,6 +1,6 @@
 {
 	"name": "react-screenreader",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Extended screen reader support for React components",
 	"main": "dist/react-screenreader.cjs.js",
 	"module": "dist/react-screenreader.esm.js",
@@ -8,7 +8,15 @@
 		"type": "git",
 		"url": "git+https://github.com/Kashkovsky/react-screenreader.git"
 	},
-	"keywords": [ "screenreader", "accessibility", "a11y", "react", "hooks", "screen", "reader" ],
+	"keywords": [
+		"screenreader",
+		"accessibility",
+		"a11y",
+		"react",
+		"hooks",
+		"screen",
+		"reader"
+	],
 	"author": "Denis Kashkovsky",
 	"license": "MIT",
 	"bugs": {
@@ -63,9 +71,16 @@
 		"typescript": "3.5.1"
 	},
 	"jest": {
-		"collectCoverageFrom": [ "src/**/*.{js,jsx,ts,tsx}", "!src/**/*.d.ts" ],
-		"setupFiles": [ "react-app-polyfill/jsdom" ],
-		"setupFilesAfterEnv": [ "<rootDir>/scripts/testSetup.js" ],
+		"collectCoverageFrom": [
+			"src/**/*.{js,jsx,ts,tsx}",
+			"!src/**/*.d.ts"
+		],
+		"setupFiles": [
+			"react-app-polyfill/jsdom"
+		],
+		"setupFilesAfterEnv": [
+			"<rootDir>/scripts/testSetup.js"
+		],
 		"testMatch": [
 			"<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
 			"<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
@@ -83,11 +98,27 @@
 			"^react-native$": "react-native-web",
 			"^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
 		},
-		"moduleFileExtensions": [ "web.js", "js", "web.ts", "ts", "web.tsx", "tsx", "json", "web.jsx", "jsx", "node" ],
-		"watchPlugins": [ "jest-watch-typeahead/filename", "jest-watch-typeahead/testname" ]
+		"moduleFileExtensions": [
+			"web.js",
+			"js",
+			"web.ts",
+			"ts",
+			"web.tsx",
+			"tsx",
+			"json",
+			"web.jsx",
+			"jsx",
+			"node"
+		],
+		"watchPlugins": [
+			"jest-watch-typeahead/filename",
+			"jest-watch-typeahead/testname"
+		]
 	},
 	"babel": {
-		"presets": [ "react-app" ]
+		"presets": [
+			"react-app"
+		]
 	},
 	"types": "types"
 }
